@@ -6,7 +6,7 @@ categories: backbone jasmine
 ---
 [Backbone.js][backbone-page] is a small Javascript library which helps give structure to web applications. In contrast to the many other front end technologies out there, Backbone attempts to give just as little as possible in order to build an application. As a result, we need to be extra careful when designing and developing an application to make it easy to test and maintain in the future.
 
-In this blog post, I will explain how to write a simple and maintainable Backbone view. I will be creating a simple cart item comment form view using BDD which will allow the user to enter a comment on a cart item. I will be using [Coffeescript][coffeescript-page] and the [Jasmine][jasmine-page] testing framework as tools to develop and test the view.
+In this blog post, I will explain how to write a simple and maintainable Backbone view. I will be creating a simple cart item comment form view using [BDD][bdd-page] which will allow the user to enter a comment on a cart item. I will be using [Coffeescript][coffeescript-page] and the [Jasmine][jasmine-page] testing framework as tools to develop and test the view.
 
 A Backbone view can be thought of as a controller in the [MVC][mvc-page] software design pattern. It handles user input, and it is in charge of updating the necessary DOM elements when appropriate. A view should know as little as possible about the application, in other words, it needs to be as dumb as it can be. It should not perform any complicated logic, instead, it should only be in charge of rendering and updating data in its associated model. The model related to this view will be the [Single Source of Truth][sct-page]; all the information the view is going to use is going to be stored and retrieved from a single place.
 
@@ -235,6 +235,7 @@ setComment: (event) ->
 Writing small, modular, and well designed views is extremly important, and by defining the real purpose of a view, bad practices and patterns can be quickly avoided and thus help us to create a sane and maintainable application. Always keep in mind that view tests catch the most regression issues, therefore, even though creating tests for views can sometimes be a daunting task, at the long run, it will always be worthy.
 
 [backbone-page]: http://backbonejs.org
+[bdd-page]: http://guide.agilealliance.org/guide/bdd.html
 [coffeescript-page]: http://coffeescript.org/
 [jasmine-page]: http://jasmine.github.io/
 [mvc-page]: http://st-www.cs.illinois.edu/users/smarch/st-docs/mvc.html
