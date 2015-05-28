@@ -1,0 +1,56 @@
+# Jekyll configuration precedence:
+# 1. Gruntfile task
+# 2. config.build.yml
+# 3. config.yml
+
+name: Diego Castillo
+author:
+  name: Diego Castillo
+  profession: Front End Developer
+  email: diegocasmo@gmail.com
+  description: 'Passionate front end developer who seeks to become not only a better professional, but also a better human being every day.'
+  avatar: '/images/diegocasmo-avatar.png'
+  github: 'https://github.com/diegocasmo/'
+  twitter: 'https://twitter.com/diegocasmo'
+
+page:
+  title: Diego Castillo
+
+meta:
+  description: Diego Castillo's front end developer blog
+  keywords: 'front end developer, software developer, panama'
+
+meta_og:
+  title:  Diego Castillo's Blog
+  type: website
+  url: http://diegocasmo.me/
+  image: 'http://diegocasmo.me/images/diegocasmo-og.png'
+  site_name: Diego Castillo's Blog
+  description: Diego Castillo's front end developer blog
+
+meta_twitter:
+  card: summary_large_image
+  site: '@diegocasmo'
+  creator: '@diegocasmo'
+  title:  Diego Castillo's Blog
+  description: Diego Castillo's front end developer blog
+  image_src: 'http://diegocasmo.me/images/diegocasmo-card.png'
+
+# Grunt handles images and assets.
+exclude: ['images', 'styles', 'scripts', 'fonts',
+          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+
+include: ['.htaccess']
+
+# _config.build.yml sets future and show_drafts to false on `grunt build`
+future: true
+show_drafts: true
+
+permalink: date
+paginate: 1
+paginate_path: 'page:num'
+
+# Markdown library
+markdown: redcarpet
+#   extensions: ['fenced_code_blocks', 'smart']
+pygments: true

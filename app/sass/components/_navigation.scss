@@ -1,0 +1,59 @@
+.navigation {
+  text-align: center;
+  margin: 20px 0px;
+  padding: 0px;
+  list-style: none;
+
+  @include _breakpoint(tablet) {
+    text-align: left;
+    margin: 10px 0px;
+  }
+}
+
+.navigation-item {
+  margin: 10px 0px;
+
+  &:first-child {
+    margin: 0px 0px 10px;
+  }
+
+  &:last-child {
+    margin: 10px 0px 0px;
+  }
+
+  @include _breakpoint(tablet) {
+    margin: 7px 0px;
+
+    &:first-child {
+      margin: 0px 0px 7px;
+    }
+
+    &:last-child {
+      margin: 7px 0px 0px;
+    }
+  }
+}
+
+.navigation-link {
+  @include _font-size(1.2);
+  color: $dark_black;
+
+  @include _breakpoint(tablet) {
+    @include _font-size(1);
+  }
+
+  &:active, &:focus, &:hover {
+    color: $dark_black;
+    text-decoration: none;
+  }
+}
+
+.no-touch {
+  .navigation-link {
+    &:hover {
+      @include _transition(background-color .3s, color .3s);
+      color: $dark_blue;
+      text-decoration: none;
+    }
+  }
+}

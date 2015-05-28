@@ -1,0 +1,53 @@
+.user-profile {
+  display: block;
+}
+
+.user-profile-avatar {
+  @include _border-radius(50%);
+  display: block;
+  width: 125px;
+  height: auto;
+  margin: 20px auto 10px;
+  @include _breakpoint(tablet) {
+    width: 175px;
+    margin: 10px auto;
+  }
+}
+
+.user-profile-name {
+  display: block;
+  color: $dark_black;
+  margin: 0px 0px 12px;
+  text-align: center;
+
+  @include _breakpoint(tablet) {
+    color: $lighter_gray;
+  }
+}
+
+.user-profile-profession {
+  display: block;
+  text-align: center;
+  margin: 0px 0px 10px;
+  padding-top: 12px;
+  color: $dark_black;
+  border-top: 1px solid $dark_black;
+
+  @include _breakpoint(tablet) {
+    border-top: 1px solid $lighter_gray;
+    color: $lighter_gray;
+  }
+}
+
+.user-profile-description {
+  display: block;
+  color: $dark_black;
+  text-align: center;
+  margin: 0px auto 10px auto;
+  padding: 0px 10px;
+  max-width: 500px;
+
+  @include _breakpoint(tablet) {
+    color: $lighter_gray;
+  }
+}
