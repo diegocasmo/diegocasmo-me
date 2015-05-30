@@ -37,8 +37,7 @@ meta_twitter:
   image_src: 'http://diegocasmo.me/images/diegocasmo-card.png'
 
 # Grunt handles images and assets.
-exclude: ['images', 'styles', 'scripts', 'fonts',
-          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+exclude: ['sass', 'styles', 'scripts', 'images']
 
 include: ['.htaccess']
 

@@ -116,11 +116,7 @@ module.exports = function (grunt) {
         outputStyle: 'expanded',
         raw: 'extensions_dir = "<%= yeoman.app %>/_bower_components"\n'
       },
-      dist: {
-        options: {
-          generatedImagesDir: '<%= yeoman.dist %>/images/generated'
-        }
-      },
+      dist: {},
       server: {
         options: {
           debugInfo: true,
@@ -151,17 +147,17 @@ module.exports = function (grunt) {
       }
     },
     useminPrepare: {
+      html: ['<%= yeoman.app %>/index.html'],
       options: {
-        dest: '<%= yeoman.dist %>'
-      },
-      html: '<%= yeoman.dist %>/index.html'
+          dest: '<%= yeoman.dist %>'
+      }
     },
     usemin: {
+      html: ['<%= yeoman.dist %>/{,*/}*.html'],
+      css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       options: {
-        assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images']
-      },
-      html: ['<%= yeoman.dist %>/**/*.html'],
-      css: ['<%= yeoman.dist %>/styles/**/*.css']
+          dirs: ['<%= yeoman.dist %>']
+      }
     },
     htmlmin: {
       dist: {
@@ -186,8 +182,11 @@ module.exports = function (grunt) {
     // Usemin adds files to cssmin
     cssmin: {
       dist: {
-        options: {
-          check: 'gzip'
+        files: {
+          '<%= yeoman.dist %>/styles/main.css': [
+            '.tmp/styles/{,*/}*.css',
+            '<%= yeoman.app %>/styles/**/*.css'
+          ]
         }
       }
     },
@@ -221,17 +220,11 @@ module.exports = function (grunt) {
           dot: true,
           cwd: '<%= yeoman.app %>',
           src: [
-            // Jekyll processes and moves HTML and text files.
-            // Usemin moves CSS and javascript inside of Usemin blocks.
-            // Copy moves asset files and directories.
+            'scripts/**/*',
+            'styles/**/*',
             'images/**/*',
-            'fonts/**/*',
-            // Like Jekyll, exclude files & folders prefixed with an underscore.
-            '!**/_*{,/**}'
-            // Explicitly add any files your site needs for distribution here.
-            //'_bower_components/jquery/jquery.min.js',
-            //'favicon.ico',
-            //'apple-touch*.png'
+            '_bower_components/font-awesome/fonts/**/*',
+            '_bower_components/jquery/dist/jquery.min.js'
           ],
           dest: '<%= yeoman.dist %>'
         }]
@@ -353,15 +346,16 @@ module.exports = function (grunt) {
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
     'concurrent:dist',
+    'copy:dist',
     'useminPrepare',
-    'concat',
-    'cssmin',
-    'uglify',
-    'imagemin',
-    'svgmin',
-    'filerev',
     'usemin',
-    'htmlmin'
+    // 'concat',
+    'cssmin',
+    // 'uglify',
+    // 'imagemin',
+    // 'svgmin',
+    // 'filerev',
+    // 'htmlmin'
     ]);
 
   grunt.registerTask('deploy', [
