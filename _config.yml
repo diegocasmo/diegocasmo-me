@@ -17,7 +17,7 @@ page:
   title: Diego Castillo's Blog
 
 meta:
-  description: Diego Castillo's front end developer blog
+  description: Diego Castillo's front end development blog.
   keywords: 'front end developer, software developer, panama'
 
 meta_og:
@@ -26,14 +26,14 @@ meta_og:
   url: http://diegocasmo.me/
   image: 'http://diegocasmo.me/images/diegocasmo-og.png'
   site_name: Diego Castillo's Blog
-  description: Diego Castillo's front end developer blog
+  description: Diego Castillo's front end development blog.
 
 meta_twitter:
   card: summary_large_image
   site: '@diegocasmo'
   creator: '@diegocasmo'
   title:  Diego Castillo's Blog
-  description: Diego Castillo's front end developer blog
+  description: Diego Castillo's front end development blog.
   image_src: 'http://diegocasmo.me/images/diegocasmo-card.png'
 
 # Grunt handles images and assets.
