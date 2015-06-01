@@ -10,7 +10,7 @@ layout: default
     {% for post in site.posts %}
       <li class="post-item">
         <h3 class="post-item-title">
-          <a class="post-item-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} - {{ post.date | date: "%b %-d, %Y" }}</a>
+          <a data-ga="{{ post.title }}" class="post-item-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} - {{ post.date | date: "%b %-d, %Y" }}</a>
         </h3>
       </li>
     {% endfor %}
