@@ -89,13 +89,10 @@ initialize: ->
 
 We have successfully tested our cart item comment form view is being initialized properly. It is now time to test whether it is being rendered as expected. As far as templates, I have found it is better to write inline templates even though they might seem more difficult to understand. But by using inline templates, we force ourselves as developers to write smaller, simpler, and logicless templates, which in turn will help us to create a more independent and maintainable application.
 
-With the following tests, I want to make sure the view returns itself from the `render` method (to allow for chaining), if it renders a cart item comment when one is present, and if it renders an empty textarea if no cart item comment is present.
+With the following tests, I want to make sure if the view renders a cart item comment when one is present, and if it renders an empty textarea if no cart item comment is present.
 
 {% highlight coffeescript %}
 describe 'Rendering', ->
-
-  it 'returns the view object', ->
-    expect(@view.render()).toEqual(@view)
 
   describe 'when cart item has comment', ->
 
@@ -185,10 +182,15 @@ setComment: (event) ->
   event.preventDefault()
 {% endhighlight %}
 
-The last thing to test in the view are methods. View methods shouldn’t be cumbersome with complicated logic and business rules. As I said above, the view doesn’t need to know anything about the application. As a result of this, I will simply test if the view calls the appropriate model function (`setComment`), that is, test if it correctly delegates the action to the model.
+The last thing to test in the view are methods. View methods shouldn’t be cumbersome with complicated logic and business rules. As I said above, the view doesn’t need to know anything about the application. As a result of this, I will test if the view calls the appropriate model function (`setComment`), that is, test if it correctly delegates the action to the model, and if the it returns itself from the `render` method (to allow for chaining).
 
 {% highlight coffeescript %}
 describe 'Methods', ->
+
+  describe '#render', ->
+
+    it 'returns the view object', ->
+      expect(@view.render()).toEqual(@view)
 
   describe '#setComment', ->
 
