@@ -1,0 +1,40 @@
+$icon-font-path: "../_bower_components/sass-bootstrap/fonts/";
+$fa-font-path: "../_bower_components/font-awesome/fonts/";
+@import "../_bower_components/font-awesome/scss/font-awesome";
+@import "../_bower_components/sass-bootstrap/lib/bootstrap";
+
+
+/**
+ * variables
+ */
+@import "variables/variables";
+@import "variables/breakpoint";
+@import "variables/typography";
+@import "variables/colors";
+
+/**
+ * abstractions
+ */
+@import "abstractions/mixins";
+
+/**
+ * base
+ */
+@import "base/base";
+
+/**
+ * components
+ */
+@import "components/sidebar";
+@import "components/center-content";
+@import "components/social-networks";
+@import "components/user-profile";
+@import "components/navigation";
+@import "components/post";
+@import "components/projects";
+
+/**
+ * pages
+ */
+@import "pages/home";
+@import "pages/projects";

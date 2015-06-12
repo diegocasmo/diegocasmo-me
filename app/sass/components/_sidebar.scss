@@ -1,0 +1,19 @@
+.sidebar {
+  @include _inline-block;
+  width: 100%;
+  height: auto;
+
+  @include _breakpoint(tablet) {
+    position: fixed;
+    background: $dark_black;
+    width: 320px;
+    height: 100%;
+  }
+}
+
+.sidebar-wrapper {
+  @include _breakpoint(tablet) {
+    @include _vertical_align;
+    height: 398px;
+  }
+}
