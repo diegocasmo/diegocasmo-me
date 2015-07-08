@@ -135,7 +135,7 @@ To make the tests above turn green, lets add the following code to the view:
 {% highlight coffeescript %}
 template: _.template(
   '<textarea cols="30" rows="10" class="comment-area">' +
-  '<%= comment %>' +
+    '<%= comment %>' +
   '</textarea>'
   )
 
@@ -158,7 +158,7 @@ describe 'Events', ->
     @view.$el.find('textarea')
       .trigger('keyup')
     expect(@view.setComment).toHaveBeenCalled()
-    expect(@view.setComment.callCount).toEqual(1)
+    expect(@view.setComment.calls.count()).toEqual(1)
 
   it 'it listens to "change" event on textarea', ->
     spyOn(@view, 'setComment')
@@ -166,7 +166,7 @@ describe 'Events', ->
     @view.$el.find('textarea')
       .trigger('change')
     expect(@view.setComment).toHaveBeenCalled()
-    expect(@view.setComment.callCount).toEqual(1)
+    expect(@view.setComment.calls.count()).toEqual(1)
 {% endhighlight %}
 
 Notice I call `delegateEvents` after each spy I create. The main reason for doing that is to refresh the view events to be able to call the spy later. To make the new tests pass, we will need to add the following code:
@@ -204,7 +204,7 @@ describe 'Methods', ->
       @view.setComment(preventDefault: -> )
       expect(@view.cartItemModel.setComment)
         .toHaveBeenCalled()
-      expect(@view.cartItemModel.setComment.callCount)
+      expect(@view.cartItemModel.setComment.calls.count())
         .toEqual(1)
 
     # User might want to erase comment
@@ -218,7 +218,7 @@ describe 'Methods', ->
       @view.setComment(preventDefault: -> )
       expect(@view.cartItemModel.setComment)
         .toHaveBeenCalled()
-      expect(@view.cartItemModel.setComment.callCount)
+      expect(@view.cartItemModel.setComment.calls.count())
         .toEqual(1)
 {% endhighlight %}
 
