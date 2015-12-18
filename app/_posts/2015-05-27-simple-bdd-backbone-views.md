@@ -232,7 +232,7 @@ setComment: (event) ->
   @cartItemModel.setComment(comment)
 {% endhighlight %}
 
-### Conclusion
+## Conclusion
 
 Writing small, modular, and well designed views is extremly important, and by defining the real purpose of a view, bad practices and patterns can be quickly avoided and thus help us to create a sane and maintainable application. Always keep in mind that view tests catch the most regression issues, therefore, even though creating tests for views can sometimes be a daunting task, at the long run, it will always be worthy.
 

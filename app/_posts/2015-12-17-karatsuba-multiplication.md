@@ -4,10 +4,10 @@ title:  "The Karatsuba Multiplication Algorithm"
 date:   2015-12-17 9:00:00
 categories: algorithms ruby
 ---
-# Back to basics
+## Back to basics
 Over the past few months, I have developed an interest for Artificial Intelligence (specifically Machine Learning in the form of data mining). Because of this, I have decided I will start off by reviewing (while learning some new things as well) the fundamentals of computer science (data strucutres and algorithms), before diving into data mining itself. To do this, I will be reading the book [Algorithms by S. Dasgupta, C. H. Papadimitriou, and U. V. Vazirani](http://beust.com/algorithms.pdf). If you would like to read it, keep in mind it does have a [few mistakes](http://cseweb.ucsd.edu/~dasgupta/book/errata.pdf), thus I recommend correcting them before you start reading.
 
-# Divide-and-conquer
+## Divide-and-conquer
 The second chapter starts off with the divide-and-conquer design paradigm. The main idea of the divide-and-conquer design paradigm is:
 
 - Break a problem into subproblems
@@ -16,7 +16,7 @@ The second chapter starts off with the divide-and-conquer design paradigm. The m
 
 To better illustrate this, the author explains the Karatsuba multiplication algorithm. The whole idea behind this algorithm, is that the product of two complex numbers, can be done with just three real-number multiplications (instead of four). In the divide-and-conquer design paradigm, reducing the number of subproblems (that is, reducing the branching factor of the recursion tree) produces a big impact in the overall running time of the algorithm. This happens because the reduction of subproblems occurs at every level of the recursion tree, producing a compounding effect which leads to a better performance.
 
-# The Karatsuba Multiplication Algorithm
+## The Karatsuba Multiplication Algorithm
 
 #### [Pseudocode:](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
 
@@ -99,5 +99,7 @@ describe Karatsuba do
   end
 end
 {% endhighlight %}
+
+## Conclusion
 
 The Karatsuba multiplication algorithm was relatively straightforward and fun to implement. I look forward to keep reviewing/learning more while I enjoy reading this book.
