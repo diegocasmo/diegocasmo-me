@@ -43,12 +43,7 @@
 }
 
 .project-item-link {
-  @include _font-size(1);
   color: $dark_gray;
-
-  @include _breakpoint(tablet) {
-     @include _font-size(1.2);
-  }
 
   &:active, &:focus, &:hover {
     color: $dark_gray;

@@ -1,5 +1,5 @@
 html, body {
-  @include _font-size(1);
+  @include _font-size(1.1);
   font-family: $nunito;
   font-weight: normal;
   color: $dark_black;
@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, a, button, span, input, li {
+  @include _font-size(1.1);
   @include _antialiasing;
   @include _no-outline;
   font-family: $nunito;
@@ -27,15 +28,10 @@ p, a, button, span, input, li {
 }
 
 .page-heading {
-  @include _font-size(1.2);
   @include _antialiasing;
   @include _no-outline;
   font-family: $nunito;
   font-weight: normal;
   color: $dark_black;
   margin: 10px 0px;
-
-  @include _breakpoint(tablet) {
-     @include _font-size(1.4);
-  }
 }

@@ -41,12 +41,7 @@
 }
 
 .navigation-link {
-  @include _font-size(1.2);
   color: $dark_black;
-
-  @include _breakpoint(tablet) {
-    @include _font-size(1);
-  }
 
   &:active, &:focus, &:hover {
     color: $dark_black;
