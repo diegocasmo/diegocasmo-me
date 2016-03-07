@@ -4,7 +4,7 @@ title:  "Improving Application Performance and Responsiveness on the Client"
 date:   2016-01-28 11:00:00
 categories: frontend javascript
 ---
-Performance and responsiveness on client side applications are very important topics which usually don't receive much attention until they are an obvious problem. At Ubiqua, as we began to increment the number of features our product offered, we started to experience the following problems:
+Performance and responsiveness on client side applications are very important topics which usually don't receive much attention until they are an obvious problem. At [Ubiqua](http://www.ubiqua.me/), as we began to increment the number of features our product offered, we started to experience the following problems:
 
 - Application reloaded too often in mobile devices.
 - Application took too long to reload.
