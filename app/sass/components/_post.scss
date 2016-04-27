@@ -13,13 +13,8 @@
 }
 
 .post-list {
-  list-style: none;
-  margin: 0px;
-  padding-left: 20px;
-
-  @include _breakpoint(tablet) {
-    padding-left: 30px;
-  }
+  padding: 0px;
+  margin-left: 40px;
 }
 
 .post-item {
