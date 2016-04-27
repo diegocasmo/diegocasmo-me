@@ -3,28 +3,19 @@ $fa-font-path: "../_bower_components/font-awesome/fonts/";
 @import "../_bower_components/font-awesome/scss/font-awesome";
 @import "../_bower_components/sass-bootstrap/lib/bootstrap";
 
-
-/**
- * variables
- */
+// Variables
 @import "variables/variables";
 @import "variables/breakpoint";
 @import "variables/typography";
 @import "variables/colors";
 
-/**
- * abstractions
- */
+// Abstractions
 @import "abstractions/mixins";
 
-/**
- * base
- */
+// Base
 @import "base/base";
 
-/**
- * components
- */
+// Components
 @import "components/sidebar";
 @import "components/center-content";
 @import "components/social-networks";
@@ -32,9 +23,3 @@ $fa-font-path: "../_bower_components/font-awesome/fonts/";
 @import "components/navigation";
 @import "components/post";
 @import "components/projects";
-
-/**
- * pages
- */
-@import "pages/home";
-@import "pages/projects";
