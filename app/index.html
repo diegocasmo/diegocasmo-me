@@ -7,7 +7,7 @@ layout: default
   <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <li class="post-item">
           <a data-ga="{{ post.title }}" class="post-item-link" href="{{ post.url | prepend: site.baseurl }}">
             <p class="post-item-title">{{ post.title }}</p>
@@ -17,5 +17,8 @@ layout: default
       </li>
     {% endfor %}
   </ul>
+
+  {% include post-pagination.html %}
+
 
 </div>

@@ -1,0 +1,40 @@
+.post-pagination {
+  margin: 10px 0px;
+}
+
+.post-pagination-next,
+.post-pagination-previous {
+  color: $dark_black;
+  cursor: pointer;
+
+  &:active, &:focus, &:hover {
+    color: $dark_black;
+    text-decoration: none;
+  }
+}
+
+.post-pagination-next {
+  border-left: 1px solid $dark_black;
+  padding: 0px 0px 0px 10px;
+}
+
+.post-pagination-previous {
+  border-right: 1px solid $dark_black;
+  padding: 0px 10px 0px 0px;
+}
+
+.post-pagination-page-number {
+  color: $dark_black;
+  padding: 0px 5px;
+}
+
+.no-touch {
+  .post-pagination-next,
+  .post-pagination-previous {
+    &:hover {
+      @include _transition(background-color .3s, color .3s);
+      color: $dark_blue;
+      text-decoration: none;
+    }
+  }
+}

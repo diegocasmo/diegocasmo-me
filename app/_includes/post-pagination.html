@@ -1,0 +1,9 @@
+<div class="post-pagination">
+  {% if paginator.previous_page %}
+    <a class="post-pagination-previous"href="{{ paginator.previous_page_path }}">Previous</a>
+  {% endif %}
+  <span class="post-pagination-page-number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a class="post-pagination-next"href="{{ paginator.next_page_path }}">Next</a>
+  {% endif %}
+</div>
