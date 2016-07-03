@@ -30,6 +30,7 @@ p, a, button, span, input, li {
 .page-heading {
   @include _antialiasing;
   @include _no-outline;
+  @include _font-size(1.3);
   font-family: $nunito;
   font-weight: normal;
   color: $dark_black;

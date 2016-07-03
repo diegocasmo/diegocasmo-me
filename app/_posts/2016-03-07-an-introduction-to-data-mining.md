@@ -3,6 +3,7 @@ layout: post
 title:  "An Introduction to Data Mining"
 date:   2016-03-07 17:00:00
 categories: algorithms python
+description: Decision making might be one of the most common yet more difficult things to do. When doing so, we have to make sure we are being as objective as possible and confirm our hypothesis about the given situation is correct...
 ---
 
 ### Extracting Meaningful Information from Data

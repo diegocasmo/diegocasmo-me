@@ -14,52 +14,61 @@
 
 .post-list {
   padding: 0px;
-  margin-left: 40px;
-}
-
-.post-item {
-  margin: 3px 0px;
-
-  &:first-child {
-    margin: 0px 0px 3px;
-  }
-
-  &:last-child {
-    margin: 3px 0px 0px;
-  }
-
-  @include _breakpoint(tablet) {
-    margin: 10px 0px;
-
-    &:first-child {
-      margin: 0px 0px 10px;
-    }
-
-    &:last-child {
-      margin: 10px 0px 0px;
-    }
-  }
-}
-
-.post-item-title {
   margin: 0px;
+  list-style: none;
 }
 
 .post-item-link {
   color: $dark_gray;
-
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 1px 3px rgba(103, 103, 103, 0.5);
+  border: 1px solid rgba(103, 103, 103, 0.2);
+  border-radius: 4px;
+  padding: 10px;
   &:active, &:focus, &:hover {
-    color: $dark_gray;
     text-decoration: none;
+  }
+}
+
+.post-item-title {
+  @include _font-size(1.1);
+  color: $dark_black;
+  margin: 0px;
+}
+
+.post-item-date {
+  @include _font-size(0.9);
+  margin: 0px;
+}
+
+.post-item-description {
+  @include _font-size(1);
+  margin: 0px;
+}
+
+.post-item {
+  margin: 20px 0px;
+
+  &:first-child {
+    margin: 0px 0px 20px;
+  }
+
+  &:last-child {
+    margin: 20px 0px 0px;
   }
 }
 
 .no-touch {
   .post-item-link  {
     &:hover {
-      @include _transition(background-color .3s, color .3s);
-      color: $dark_blue;
-      text-decoration: none;
+      .post-item-link, .post-item-title,
+      .post-item-date, .post-item-description {
+        @include _transition(background-color .3s, color .3s);
+        color: $dark_blue;
+        text-decoration: none;
+      }
     }
   }
 }

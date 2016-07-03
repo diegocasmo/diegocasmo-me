@@ -3,6 +3,7 @@ layout: post
 title:  "Depth First Search In Undirected Graphs"
 date:   2016-01-01 9:00:00
 categories: algorithms ruby
+description: Chapter 3 and 4 of the book Algorithms by S. Dasgupta, C. H. Papadimitriou, and U. V. Vazirani focus on graphs. A graph is specified as a set of vertices V (or nodes) and edges E between select pairs of vertices...
 ---
 Chapter 3 and 4 of the book [Algorithms by S. Dasgupta, C. H. Papadimitriou, and U. V. Vazirani](http://beust.com/algorithms.pdf) focus on graphs. A graph is specified as a set of vertices ``V`` (or nodes) and edges ``E`` between select pairs of vertices. One of the big advantages of using graphs, is that graphs provide clarity when solving problems, since they are not cluttered with irrelevant information, just the mathematical object.
 

@@ -3,6 +3,7 @@ layout: post
 title:  "Backbone Required Attributes"
 date:   2015-07-28 09:18:00
 categories: backbone views
+description: backbone-required-attributes is a view helper to enforce specific view constructor parameters. Its goal is to help designing Backbone.js views which do not perform complicated logic, but instead require to be initialized with certain paramaters in order to properly work...
 ---
 [backbone-required-attributes](https://github.com/ubiqua/backbone-required-attributes) is a view helper to enforce specific view constructor parameters. Its goal is to help designing [Backbone.js views](http://backbonejs.org/#View) which do not perform complicated logic, but instead require to be initialized with certain paramaters in order to properly work.
 

@@ -1,5 +1,6 @@
 .center-content {
   padding: 0px 10px 20px;
+  max-width: 1200px;
 
   @include _breakpoint(tablet) {
     padding-top: 20px;

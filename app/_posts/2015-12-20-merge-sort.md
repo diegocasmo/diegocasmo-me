@@ -3,6 +3,7 @@ layout: post
 title:  "The Merge Sort Algorithm"
 date:   2015-12-20 9:00:00
 categories: algorithms ruby
+description: The next algorithm in the divide-and-conquer design paradigm chapter the book examines is the merge sort algorithm. Sorting problems are suitable for using the divide-and-conquer design paradigm...
 ---
 The next algorithm in the divide-and-conquer design paradigm chapter the [book](http://beust.com/algorithms.pdf) examines is the merge sort algorithm. Sorting problems are suitable for using the divide-and-conquer design paradigm: given an array of numbers ``a[i...n]``, return a sorted version of ``a``. These are the steps taken by the merge sort algorithm to sort an array of numbers:
 
