@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "The Basics of TypeScript"
-date: 2016-08-01 10:00:00
-categories: frontend typescript
+title:  "The Basics of TypeScript"
+date:   2016-08-01 10:00:00
+categories: typescript
 description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript and can be run in any web browser or in a server in a NodeJS application. TypeScript offers support for the latest and evolving JavaScript features, including those from ECMAScript 2015. Since TypeScript is a superset of Javascript...
 ---
 
