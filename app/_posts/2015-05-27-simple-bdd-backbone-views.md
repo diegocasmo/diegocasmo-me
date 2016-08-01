@@ -2,7 +2,7 @@
 layout: post
 title:  "Simple BDD Backbone Views"
 date:   2015-05-27 16:34:00
-categories: backbone jasmine
+categories: frontend backbone jasmine
 description: Backbone.js is a small Javascript library which helps give structure to web applications. In contrast to the many other front end technologies out there, Backbone attempts to give just as little as possible in order to build an application...
 ---
 [Backbone.js][backbone-page] is a small Javascript library which helps give structure to web applications. In contrast to the many other front end technologies out there, Backbone attempts to give just as little as possible in order to build an application. As a result, we need to be extra careful when designing and developing an application to make it easy to test and maintain in the future.
