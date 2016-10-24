@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Passing Variables From The Server To The Client In An Isomorphic Application"
+title:  "Using React's Context to Pass Variables From the Server to the Client"
 date:   2016-10-24 10:00:00
 categories: react isomorphic
 description: I recently got hired by I client to create a new functionality for a single page application. The client wanted the marketing team of the company to be able to easily change the landing page content. The landing page was already...
@@ -9,7 +9,7 @@ description: I recently got hired by I client to create a new functionality for 
 ### Adding New Features To An Existing Application
 I recently got hired by I client to create a new functionality for a single page application. The client wanted the marketing team of the company to be able to easily change the landing page content. The landing page was already built with ``React`` using [isomorphic/universal rendering](http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/) and the ability to edit and save the page content was also already in place and saved in a database.
 
-The problem I had to solve was how to pass variables (containing the data necessary for rendering the page) from the server to the client without loosing the benefits of isomorphic rendering. Initially, this seemed to me as a very easy task, but as I will later explain, the fact that the application was built with isomorphic rendering made this task an opportunity to learn something new.
+The problem I had to solve was how to pass variables (containing the data necessary for rendering the page) from the server to the client in an application using [react-router](https://github.com/ReactTraining/react-router) without loosing the benefits of isomorphic rendering. Initially, this seemed to me as a very easy task, but as I will later explain, the fact that the application was built with isomorphic rendering made this task an opportunity to learn something new.
 
 The goal of this blog post is to explain how I used React's context feature to pass variables from the server to the client without loosing the benefits of isomorphic rendering.
 
@@ -17,7 +17,7 @@ The goal of this blog post is to explain how I used React's context feature to p
 I found a couple of solutions to similar problems online, but none of them worked for the same reason: the HTML rendered by the server wasn't the same as the one rendered by the client. In an isomorphic application, the HTML rendered by the server must be the same as the one rendered by the client, otherwise you would loose the benefits of it and get a [React check-sum warning](http://stackoverflow.com/a/34315767/6373590).
 
 ### The Solution
-I had already worked with the well known state container ``Redux``, and I figured I could use something similar to the [react-redux](https://github.com/reactjs/react-redux) [Provider](https://github.com/reactjs/react-redux/blob/master/src/components/Provider.js) component. So I went ahead and took a look at the source code and found out this component internally uses React's context feature (unknown to me at this time) to make the state of the application seemingly available to all container components.
+I had already worked with the well known state container ``Redux``, and I figured I could use something similar to the ``react-redux`` [Provider](https://github.com/reactjs/react-redux/blob/master/src/components/Provider.js) component. So I went ahead and took a look at the source code and found out this component internally uses React's context feature (unknown to me at this time) to make the state of the application seemingly available to all container components.
 
 React's context feature allows to pass data through the component tree without having to pass the props down manually at every level. It's actually  similar to using global variables to pass state through the application, thus it must be used sparingly (also its API is an experimental feature which is likely to change in the future).
 
@@ -45,7 +45,7 @@ Provider.childContextTypes = {
 };
 ```
 
-- ``server.jsx``: This file has an Express handler to catch all routes and isomorphically serve the application using React's ``renderToString`` method. Notice ``appData`` is passed to both the ``Provider`` and the ``index`` template:
+- ``server.jsx``: This file has an ``Express`` handler to catch all routes and isomorphically serve the application using React's ``renderToString`` method. Notice ``appData`` is passed to both the ``Provider`` and the ``index`` template:
 
 ```
   res.render('index', {
