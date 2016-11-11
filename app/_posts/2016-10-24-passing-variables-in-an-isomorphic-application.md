@@ -131,7 +131,7 @@ App.contextTypes = {
 };
 ```
 
-Now all container components, such as ``HomeContainer`` can access ``appData`` through ``props`` as you would normally do in React.
+Now all container components such as ``HomeContainer`` can access ``appData`` through ``props`` as you would normally do in React.
 
 ### Conclusion
 Implementing React's context feature was a fun learning experience and I hope this post serves as a guide of how to do so without having to add more dependencies to an application. Have you ever had to solve a similar issue? How did you manage to do it?
