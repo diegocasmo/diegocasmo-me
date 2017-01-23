@@ -84,6 +84,6 @@ let store = createStore(
 ```
 
 ### Conclusion
-I have been using Redux middleware for handling navigation redirects for quite a while now, and this solution has proven to be an intuitive, scalable, and easy to maintain option. Redux middleware are also commonly used for logging, crash reporting, and talking to an asynchronous API. 
+I have been using Redux middleware for handling navigation redirects for quite a while now, and this solution has proven to be intuitive, scalable, and easy to maintain. Redux middleware are also commonly used for logging, crash reporting, and talking to an asynchronous API.
 
 Do you have a different solution for dealing with navigation redirects in client-side applications? Leave a comment below :).
