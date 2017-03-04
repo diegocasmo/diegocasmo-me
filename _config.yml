@@ -6,8 +6,8 @@
 name: Diego Castillo
 author:
   name: Diego Castillo
-  profession: Independent Software Engineer
-  description: 'Passionate independent software engineer who seeks to become not only a better professional, but also a better human being every day.'
+  profession: Independent Software Developer
+  description: 'Passionate independent software developer who seeks to become not only a better professional, but also a better human being every day.'
   avatar: '/images/diegocasmo-avatar.png'
   github: 'https://github.com/diegocasmo/'
   twitter: 'https://twitter.com/diegocasmo'
@@ -17,7 +17,7 @@ page:
 
 meta:
   description: Diego Castillo's software development blog.
-  keywords: 'software engineer, software, developer, panama, freelance, independent'
+  keywords: 'software developer, software, developer, panama, freelance, independent'
 
 meta_og:
   title:  Diego Castillo's Blog
